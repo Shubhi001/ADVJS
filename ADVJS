@@ -1,0 +1,51 @@
+(function(){
+ 
+var quesData = function(){
+	question : '';
+	options: [];
+	answer: ''
+}
+
+var ques1 = new quesData();
+ques1.question = 'Who is best singer';
+ques1.options = ["Astrid S","Taylor swift","Ed sheeran"];
+ques1.answer= 0;
+
+var ques2 = new quesData();
+ques2.question = 'who is best actor';
+ques2.options = ["salman","shahrukh","shahid"];
+ques2.answer= 3;
+
+var ques3 = new quesData();
+ques3.question = 'who is best porn star';
+ques3.options = ["sunny","mia","danielle"];
+ques3.answer= 3;
+
+	
+game = function (){
+var qno= Math.floor(Math.random()*3);
+
+var questions = [ques1,ques2,ques3];
+console.log(questions[qno].question);
+console.log(questions[qno].options);
+var ans = prompt("Please chose 0,1 or 2");
+
+
+if (ans == questions[qno].answer ) {
+	console.log("correct ans")}
+	else{
+		console.log('wrong ans')
+	}
+	if (ans != 'y' || 'Y'){
+		game();}
+	}
+
+		
+	
+
+game();
+
+}
+)();
+
+
